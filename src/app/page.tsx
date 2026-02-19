@@ -9,6 +9,7 @@ import DesignerCursor from './DesignerCursor';
 import EmailButton from '@/components/EmailButton';
 import HeadshotEgg from '@/components/HeadshotEgg';
 import { FooterSecret } from '@/components/EasterEggs';
+import CrankCTAButton from '@/components/CrankCTAButton';
 import pixeldog from '../../images/pixii.png';
 
 export const metadata: Metadata = {
@@ -162,7 +163,7 @@ export default function AllisonPage() {
               </MagneticText>
               <MagneticText strength={10}>
                 <a
-                  href="https://www.linkedin.com/in/allisoncrank"
+                  href="https://www.linkedin.com/in/allison-crank-53366b34"
                   target="_blank"
                   rel="noreferrer"
                   className="px-4 py-1.5 text-sm font-medium rounded-full liquid-glass"
@@ -241,14 +242,7 @@ export default function AllisonPage() {
             is through{' '}
             <Link href="https://crankstudio.io">Crank Studio</Link>.
           </p>
-          <a
-            href="https://crankstudio.io"
-            target="_blank"
-            rel="noreferrer"
-            className="crank-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white rounded-full"
-          >
-            Visit Crank Studio <span className="cta-arrow">↗</span>
-          </a>
+          <CrankCTAButton />
         </div>
 
         {/* ── Contact ─────────────────────────────────────────────────────── */}
