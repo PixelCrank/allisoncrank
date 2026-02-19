@@ -150,19 +150,33 @@ body {
 
 /* ── Link gradient hover ────────────────────────────────────────────── */
 
+@keyframes gradient-text-in {
+  from { opacity: 0.15; }
+  to   { opacity: 1; }
+}
+
 .hover-link-gradient:hover .link-label,
 .hover-link-gradient:focus-visible .link-label {
   background-image: linear-gradient(
     90deg,
-    #1A0B2E 0%,
-    #FF8C37 35%,
-    #C881B5 65%,
-    #7A9CFF 100%
+    #0B0F2E 0%,
+    #D9694A 50%,
+    #F0C17A 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  animation: gradient-text-in 0.22s ease forwards;
+}
+
+.liquid-glass:hover .glass-pill-text,
+.liquid-glass:focus-visible .glass-pill-text {
+  background-image: linear-gradient(90deg, #0B0F2E 0%, #D9694A 50%, #F0C17A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 @media (forced-colors: active) {

@@ -8,6 +8,7 @@ const RAINBOW = ['#D9694A','#F0C17A','#0B0F2E','#2d3580','#e07a5f','#f5d08a','#c
 
 export default function DesignerCursor() {
   const ringRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
   const pos = useRef({ x: -200, y: -200 });
   const ringPos = useRef({ x: -200, y: -200 });
   const rafRef = useRef<number | undefined>(undefined);
@@ -15,6 +16,9 @@ export default function DesignerCursor() {
   const rainbowRef = useRef(false);
   const rainbowTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const konamiProgress = useRef(0);
+  // Click squish: lerp toward target scale each frame
+  const clickScaleRef = useRef(1);
+  const clickScaleTargetRef = useRef(1);
 
   // Don't activate on touch / coarse-pointer devices (phones, tablets)
   // useState(false) keeps SSR and first client render in sync; effect detects touch.
@@ -84,17 +88,74 @@ export default function DesignerCursor() {
       }
     };
 
+    // ── Click squish + ripple ─────────────────────────────────────────────
+    const onMouseDown = () => {
+      clickScaleTargetRef.current = 0.72;
+      // Spawn an expanding ripple ring at the click position
+      const ripple = document.createElement('div');
+      const x = pos.current.x;
+      const y = pos.current.y;
+      ripple.style.cssText = `
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        border-radius: 50%;
+        z-index: 9998;
+        width: 34px; height: 34px;
+        border: 1px solid rgba(255,255,255,0.45);
+        transform: translate(${x}px, ${y}px) translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+        transition: transform 0.55s cubic-bezier(0.22,1,0.36,1), opacity 0.55s ease;
+      `;
+      document.body.appendChild(ripple);
+      // Trigger transition on the next paint
+      requestAnimationFrame(() => {
+        ripple.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%) scale(2.8)`;
+        ripple.style.opacity = '0';
+      });
+      setTimeout(() => ripple.remove(), 600);
+    };
+
+    const onMouseUp = () => {
+      // Overshoot spring back
+      clickScaleTargetRef.current = 1.12;
+      setTimeout(() => { clickScaleTargetRef.current = 1; }, 120);
+    };
+
     window.addEventListener('mousemove', onMove, { passive: true });
     window.addEventListener('mouseover', onOver, { passive: true });
     window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('mouseup', onMouseUp);
 
     const tick = () => {
       rainbowFrame++;
       const ring = ringRef.current;
+      const dot = dotRef.current;
+
       if (ring) {
         ringPos.current.x = lerp(ringPos.current.x, pos.current.x, 0.13);
         ringPos.current.y = lerp(ringPos.current.y, pos.current.y, 0.13);
-        ring.style.transform = `translate(${ringPos.current.x}px, ${ringPos.current.y}px) translate(-50%, -50%)`;
+
+        // ── Velocity stretch: lag vector drives squish like a liquid droplet
+        const dx = pos.current.x - ringPos.current.x;
+        const dy = pos.current.y - ringPos.current.y;
+        const speed = Math.sqrt(dx * dx + dy * dy);
+        const stretchAmt = Math.min(speed * 0.016, 0.40);
+        const sx = 1 + stretchAmt;
+        const sy = Math.max(1 / sx, 0.72); // preserve rough volume
+        const angle = speed > 1 ? Math.atan2(dy, dx) : 0;
+
+        // ── Click squish: lerp toward target scale
+        clickScaleRef.current = lerp(clickScaleRef.current, clickScaleTargetRef.current, 0.22);
+        const cs = clickScaleRef.current;
+
+        ring.style.transform = [
+          `translate(${ringPos.current.x}px, ${ringPos.current.y}px)`,
+          `translate(-50%, -50%)`,
+          `rotate(${angle}rad)`,
+          `scale(${sx * cs}, ${sy * cs})`,
+        ].join(' ');
 
         if (rainbowRef.current) {
           const idx = Math.floor(rainbowFrame / 4) % RAINBOW.length;
@@ -105,6 +166,12 @@ export default function DesignerCursor() {
           ring.style.height = '42px';
         }
       }
+
+      // ── Precise inner dot: zero lag, always at exact pointer position
+      if (dot) {
+        dot.style.transform = `translate(${pos.current.x}px, ${pos.current.y}px) translate(-50%, -50%)`;
+      }
+
       rafRef.current = requestAnimationFrame(tick);
     };
 
@@ -115,6 +182,8 @@ export default function DesignerCursor() {
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('mouseover', onOver);
       window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('mousedown', onMouseDown);
+      window.removeEventListener('mouseup', onMouseUp);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       if (rainbowTimerRef.current) clearTimeout(rainbowTimerRef.current);
     };
@@ -123,20 +192,35 @@ export default function DesignerCursor() {
   if (isTouchDevice) return null;
 
   return (
-    <div
-      ref={ringRef}
-      className="pointer-events-none fixed top-0 left-0 z-[9999] rounded-full"
-      style={{
-        width: 34,
-        height: 34,
-        background: 'rgba(184,184,186,0.06)',
-        backdropFilter: 'blur(2px) saturate(120%)',
-        WebkitBackdropFilter: 'blur(2px) saturate(120%)',
-        boxShadow: GLASS_SHADOW,
-        willChange: 'transform',
-        transition: 'width 0.25s cubic-bezier(0.22,1,0.36,1), height 0.25s cubic-bezier(0.22,1,0.36,1), background 0.25s ease, backdrop-filter 0.25s ease',
-      }}
-    />
+    <>
+      {/* Lagging glass ring */}
+      <div
+        ref={ringRef}
+        className="pointer-events-none fixed top-0 left-0 z-[9999] rounded-full"
+        style={{
+          width: 34,
+          height: 34,
+          background: 'rgba(184,184,186,0.06)',
+          backdropFilter: 'blur(2px) saturate(120%)',
+          WebkitBackdropFilter: 'blur(2px) saturate(120%)',
+          boxShadow: GLASS_SHADOW,
+          willChange: 'transform',
+          transition: 'width 0.25s cubic-bezier(0.22,1,0.36,1), height 0.25s cubic-bezier(0.22,1,0.36,1), background 0.25s ease, backdrop-filter 0.25s ease',
+        }}
+      />
+      {/* Precise inner dot — zero lag, always at exact pointer */}
+      <div
+        ref={dotRef}
+        className="pointer-events-none fixed top-0 left-0 z-[10000] rounded-full"
+        style={{
+          width: 5,
+          height: 5,
+          background: 'rgba(255,255,255,0.9)',
+          boxShadow: '0 0 5px 1px rgba(255,255,255,0.35)',
+          willChange: 'transform',
+        }}
+      />
+    </>
   );
 }
 

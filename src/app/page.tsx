@@ -3,13 +3,11 @@ import Image from 'next/image';
 
 import headshot from '../../images/headshot.png';
 import crankLogo from '../../images/crankstudio.png';
-import MagneticText from '@/components/MagneticText';
 import ScrollAnimations from './ScrollAnimations';
 import DesignerCursor from './DesignerCursor';
-import EmailButton from '@/components/EmailButton';
-import HeadshotEgg from '@/components/HeadshotEgg';
 import { FooterSecret } from '@/components/EasterEggs';
 import CrankCTAButton from '@/components/CrankCTAButton';
+import ParisHeaderRow from '@/components/ParisHeaderRow';
 import pixeldog from '../../images/pixii.png';
 
 export const metadata: Metadata = {
@@ -44,22 +42,6 @@ export default function AllisonPage() {
         </defs>
       </svg>
       <style>{`
-        [data-allison] .hover-link-gradient:hover .link-label,
-        [data-allison] .hover-link-gradient:focus-visible .link-label {
-          background-image: linear-gradient(90deg, #0B0F2E 0%, #D9694A 50%, #F0C17A 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          -webkit-text-fill-color: transparent;
-        }
-        [data-allison] .liquid-glass:hover .glass-pill-text,
-        [data-allison] .liquid-glass:focus-visible .glass-pill-text {
-          background-image: linear-gradient(90deg, #0B0F2E 0%, #D9694A 50%, #F0C17A 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent !important;
-          -webkit-text-fill-color: transparent !important;
-        }
         @keyframes cta-gradient-shift {
           0%   { background-position: 0% 50%; }
           50%  { background-position: 100% 50%; }
@@ -138,42 +120,7 @@ export default function AllisonPage() {
       <div className="px-6 md:px-12 lg:px-20 max-w-3xl mx-auto py-16 sm:py-24">
 
         {/* ── Header ──────────────────────────────────────────────────────── */}
-        <header className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-10 sm:gap-14 items-center mb-16 sm:mb-20">
-          <HeadshotEgg src={headshot} pixelSrc={pixeldog} alt="Allison Crank" />
-
-          <div className="space-y-5">
-            <div className="space-y-1.5">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#a3a3a3]">
-                <span className="paris-word">
-                  Paris
-                  <span className="paris-tooltip">🗼 48°51′N, 2°21′E</span>
-                </span>
-              </p>
-              <h1
-                className="text-[clamp(2.6rem,5.5vw,4rem)] leading-[0.94] font-light tracking-tight"
-                style={{ fontFamily: 'var(--font-crank)' }}
-              >
-                Allison Crank
-              </h1>
-            </div>
-
-            <div className="flex flex-wrap gap-2.5 pt-1">
-              <MagneticText strength={10}>
-                <EmailButton />
-              </MagneticText>
-              <MagneticText strength={10}>
-                <a
-                  href="https://www.linkedin.com/in/allison-crank-53366b34"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-4 py-1.5 text-sm font-medium rounded-full liquid-glass"
-                >
-                  <span className="glass-pill-text text-black/80">LinkedIn</span>
-                </a>
-              </MagneticText>
-            </div>
-          </div>
-        </header>
+        <ParisHeaderRow headshotSrc={headshot} pixelSrc={pixeldog} />
 
         {/* ── Bio ─────────────────────────────────────────────────────────── */}
         <div className="mt-14 space-y-5 text-[clamp(1rem,2vw,1.1rem)] font-light leading-relaxed text-[#737373]">

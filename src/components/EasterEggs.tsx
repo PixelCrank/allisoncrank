@@ -55,12 +55,36 @@ export function ScrambleName({ className, style }: { className?: string; style?:
   );
 }
 
-const SECRET = "built with obsessive care ✦ paris, 2025";
+const SECRET = "built with obsessive care ✦ paris, 2026";
 
 export function FooterSecret() {
   const [revealed, setRevealed] = useState(false);
+  const [displayText, setDisplayText] = useState('allisoncrank.com');
   const clickCount = useRef(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const rafRef = useRef<number | undefined>(undefined);
+  const startRef = useRef<number>(0);
+  const DURATION = 700;
+
+  const runReveal = useCallback(() => {
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    startRef.current = performance.now();
+    const tick = (now: number) => {
+      const progress = Math.min((now - startRef.current) / DURATION, 1);
+      setDisplayText(scramble(SECRET, progress));
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(tick);
+      } else {
+        setDisplayText(SECRET);
+      }
+    };
+    rafRef.current = requestAnimationFrame(tick);
+  }, []);
+
+  useEffect(() => () => {
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
 
   const handleClick = useCallback(() => {
     clickCount.current++;
@@ -70,21 +94,27 @@ export function FooterSecret() {
     if (clickCount.current >= 3) {
       clickCount.current = 0;
       setRevealed(true);
-      setTimeout(() => setRevealed(false), 4000);
+      runReveal();
+      timerRef.current = setTimeout(() => {
+        setRevealed(false);
+        setDisplayText('allisoncrank.com');
+        if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      }, 4000);
     }
-  }, []);
+  }, [runReveal]);
 
   return (
     <p
-      className="mt-16 text-xs text-[#c0c0c0] font-light cursor-default select-none"
+      className="mt-16 text-xs font-light cursor-default select-none"
       onClick={handleClick}
-      style={{ transition: 'color 0.4s ease' }}
+      style={{
+        color: revealed ? '#D9694A' : '#c0c0c0',
+        letterSpacing: revealed ? '0.06em' : undefined,
+        fontVariantNumeric: 'tabular-nums',
+        transition: 'color 0.3s ease, letter-spacing 0.3s ease',
+      }}
     >
-      {revealed ? (
-        <span style={{ color: '#D9694A', letterSpacing: '0.06em' }}>{SECRET}</span>
-      ) : (
-        'allisoncrank.com'
-      )}
+      {displayText}
     </p>
   );
 }

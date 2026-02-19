@@ -19,6 +19,8 @@ export default function MagneticText<TAs extends ElementType = 'div'>({
   const Component = (as ?? 'div') as ElementType;
   const ref = useRef<HTMLElement>(null);
   const animationFrameRef = useRef<number | undefined>(undefined);
+  const currentPos = useRef({ x: 0, y: 0 });
+  const springBackRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const element = ref.current;
@@ -41,27 +43,37 @@ export default function MagneticText<TAs extends ElementType = 'div'>({
 
         if (distance < maxDistance) {
           const intensity = 1 - distance / maxDistance;
-          const moveX = (deltaX / maxDistance) * strength * intensity;
-          const moveY = (deltaY / maxDistance) * strength * intensity;
-          element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+          currentPos.current.x = (deltaX / maxDistance) * strength * intensity;
+          currentPos.current.y = (deltaY / maxDistance) * strength * intensity;
+          element.style.transform = `translate(${currentPos.current.x}px, ${currentPos.current.y}px)`;
         }
       });
     };
 
     const handleMouseLeave = () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
-      element.style.transform = 'translate(0, 0)';
+      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (springBackRef.current) cancelAnimationFrame(springBackRef.current);
+
+      const springBack = () => {
+        currentPos.current.x += (0 - currentPos.current.x) * 0.12;
+        currentPos.current.y += (0 - currentPos.current.y) * 0.12;
+        element.style.transform = `translate(${currentPos.current.x}px, ${currentPos.current.y}px)`;
+        if (Math.abs(currentPos.current.x) > 0.05 || Math.abs(currentPos.current.y) > 0.05) {
+          springBackRef.current = requestAnimationFrame(springBack);
+        } else {
+          currentPos.current = { x: 0, y: 0 };
+          element.style.transform = 'translate(0, 0)';
+        }
+      };
+      springBackRef.current = requestAnimationFrame(springBack);
     };
 
     element.addEventListener('mousemove', handleMouseMove);
     element.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
+      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (springBackRef.current) cancelAnimationFrame(springBackRef.current);
       element.removeEventListener('mousemove', handleMouseMove);
       element.removeEventListener('mouseleave', handleMouseLeave);
     };
@@ -70,7 +82,7 @@ export default function MagneticText<TAs extends ElementType = 'div'>({
   return (
     <Component
       ref={ref as unknown as Ref<HTMLElement>}
-      className={`${className} transition-transform duration-300 ease-out will-change-transform`}
+      className={`${className} will-change-transform`}
       {...(restProps as unknown as ComponentPropsWithoutRef<TAs>)}
     >
       {children}

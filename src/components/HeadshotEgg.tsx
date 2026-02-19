@@ -6,10 +6,14 @@ export default function HeadshotEgg({
   src,
   pixelSrc,
   alt,
+  showParis = false,
+  parisImgSrc,
 }: {
   src: StaticImageData;
   pixelSrc: StaticImageData;
   alt: string;
+  showParis?: boolean;
+  parisImgSrc?: string;
 }) {
   const [showPixel, setShowPixel] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -20,6 +24,11 @@ export default function HeadshotEgg({
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => setShowPixel(false), 2200);
   }, [showPixel]);
+
+  // Paris image overrides pixel/headshot when active
+  const parisVisible = showParis && !showPixel;
+  // Headshot is visible when neither paris nor pixel is showing
+  const headshotVisible = !showPixel && !parisVisible;
 
   return (
     <div
@@ -35,9 +44,9 @@ export default function HeadshotEgg({
         height={400}
         priority
         unoptimized
-        className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
+        className={`w-full h-full object-cover transition-all duration-700 ease-out${!parisVisible ? ' group-hover:scale-110' : ''}`}
         style={{
-          opacity: showPixel ? 0 : 1,
+          opacity: headshotVisible ? 1 : 0,
           transform: showPixel ? 'scale(1.08)' : undefined,
           transition: 'opacity 0.4s ease, transform 0.7s ease',
         }}
@@ -56,7 +65,21 @@ export default function HeadshotEgg({
           transition: 'opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
         }}
       />
-      {/* Label */}
+      {/* Paris rooftop swap */}
+      {parisImgSrc && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={parisImgSrc}
+          alt="Paris rooftop"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            opacity: parisVisible ? 1 : 0,
+            transform: parisVisible ? 'scale(1)' : 'scale(1.06)',
+            transition: 'opacity 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          }}
+        />
+      )}
+      {/* Pixel label */}
       <div
         className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] tracking-wider text-white/90 bg-black/30 backdrop-blur-sm px-2.5 py-0.5 rounded-full pointer-events-none whitespace-nowrap"
         style={{
@@ -66,6 +89,7 @@ export default function HeadshotEgg({
       >
         this is Pixel 🐾
       </div>
+
     </div>
   );
 }
