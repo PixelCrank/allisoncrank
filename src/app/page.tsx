@@ -171,7 +171,7 @@ export default function AllisonPage() {
             . I also mentor at the Venice Biennale College Cinema — most recently for the 2026 edition.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '5' } as React.CSSProperties}>
-            I design for how people feel, move, and make meaning in complex, hybrid worlds. I&apos;m based in Paris with my Pomeranian, <PixelTooltip src={pixeldog} /> — who has strong opinions about nap architecture and approves of very little.
+            I design for how people feel, move, and make meaning in complex, hybrid worlds. Offline, I&apos;m usually roaming Paris with <PixelTooltip src={pixeldog} />, my Pomeranian — an exacting authority on nap architecture.
           </p>
         </div>
 
