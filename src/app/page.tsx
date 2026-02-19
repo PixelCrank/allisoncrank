@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-import headshot from '../../images/allisoncrank.png';
+import headshot from '../../images/headshot.png';
 import crankLogo from '../../images/crankstudio.png';
 import MagneticText from '@/components/MagneticText';
 import ScrollAnimations from './ScrollAnimations';
 import DesignerCursor from './DesignerCursor';
 import EmailButton from '@/components/EmailButton';
+import HeadshotEgg from '@/components/HeadshotEgg';
+import { FooterSecret } from '@/components/EasterEggs';
+import pixeldog from '../../images/pixii.png';
 
 export const metadata: Metadata = {
   title: 'Allison Crank',
@@ -135,17 +138,7 @@ export default function AllisonPage() {
 
         {/* ── Header ──────────────────────────────────────────────────────── */}
         <header className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-10 sm:gap-14 items-center mb-16 sm:mb-20">
-          <div data-cursor="allison" className="group w-[180px] sm:w-[220px] aspect-square rounded-2xl overflow-hidden bg-black/5 flex-shrink-0">
-            <Image
-              src={headshot}
-              alt="Allison Crank"
-              width={400}
-              height={400}
-              priority
-              unoptimized
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-            />
-          </div>
+          <HeadshotEgg src={headshot} pixelSrc={pixeldog} alt="Allison Crank" />
 
           <div className="space-y-5">
             <div className="space-y-1.5">
@@ -266,9 +259,7 @@ export default function AllisonPage() {
           </p>
         </div>
 
-        <p className="mt-16 text-xs text-[#c0c0c0] font-light">
-          allisoncrank.com
-        </p>
+        <FooterSecret />
 
       </div>
       <ScrollAnimations />
