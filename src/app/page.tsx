@@ -128,9 +128,9 @@ export default function AllisonPage() {
           <p className="stagger-paragraph" style={{ '--i': '0' } as React.CSSProperties}>
             I&apos;m a designer and researcher based in Paris, originally trained as an
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
-            Eindhoven, and Design for Digital Innovation at EPFL and ECAL. In 2020 I founded{' '}
+            Eindhoven, and Design for Digital Innovation at EPFL and ECAL. In 2020 I launched{' '}
             <Link href="https://crankstudio.io" className="text-[#737373]">Crank Studio</Link>
-            {' '}— a practice devoted to experiences where design feels precise, human, and alive.
+            {' '}— a practice devoted to experiences where design feels precise, human, and alive. Formally incorporated in 2024.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '1' } as React.CSSProperties}>
             My work spans XR, VR, MR, game design, AI-driven interfaces, and spatial
