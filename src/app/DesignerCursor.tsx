@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const GLASS_SHADOW = 'inset 0 0 0 1px rgba(255,255,255,0.18), inset 1.8px 3px 0px -2px rgba(255,255,255,0.85), inset -2px -2px 0px -2px rgba(255,255,255,0.72), inset -3px -8px 1px -6px rgba(255,255,255,0.5), inset -0.3px -1px 4px 0px rgba(0,0,0,0.09), inset 0px 3px 4px -2px rgba(0,0,0,0.16), 0px 2px 8px 0px rgba(0,0,0,0.09), 0px 4px 16px 0px rgba(0,0,0,0.06)';
 
@@ -16,7 +16,15 @@ export default function DesignerCursor() {
   const rainbowTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const konamiProgress = useRef(0);
 
+  // Don't activate on touch / coarse-pointer devices (phones, tablets)
+  // useState(false) keeps SSR and first client render in sync; effect detects touch.
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
   useEffect(() => {
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      setIsTouchDevice(true);
+      return;
+    }
     document.documentElement.style.cursor = 'none';
 
     // ── Konami code listener ──────────────────────────────────────────────
@@ -111,6 +119,8 @@ export default function DesignerCursor() {
       if (rainbowTimerRef.current) clearTimeout(rainbowTimerRef.current);
     };
   }, []);
+
+  if (isTouchDevice) return null;
 
   return (
     <div

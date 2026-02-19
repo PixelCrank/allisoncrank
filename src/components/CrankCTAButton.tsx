@@ -104,7 +104,7 @@ export default function CrankCTAButton() {
         ctx.font = '600 12px system-ui, sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText('CRANK STUDIO  ↗', W / 2, H / 2);
+        ctx.fillText('CRANK STUDIO', W / 2, H / 2);
       }
 
       ctx.restore();
@@ -130,7 +130,18 @@ export default function CrankCTAButton() {
       onClick={handleClick}
       className="crank-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white rounded-full"
     >
-      Visit Crank Studio <span className="cta-arrow">↗</span>
+      Visit Crank Studio{' '}
+      <svg
+        aria-hidden="true"
+        width="11"
+        height="11"
+        viewBox="0 0 11 11"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="cta-arrow"
+      >
+        <path d="M1.5 9.5L9.5 1.5M9.5 1.5H3M9.5 1.5V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
     </a>
   );
 }

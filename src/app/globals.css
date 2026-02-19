@@ -173,3 +173,20 @@ body {
     -webkit-text-fill-color: LinkText;
   }
 }
+
+/* ── Mobile / touch: make links clearly visible ─────────────────────── */
+@media (pointer: coarse) {
+  .link-label {
+    text-decoration-color: currentColor; /* full-opacity underline */
+  }
+
+  /* Show the gradient text statically on touch devices (no hover) */
+  .hover-link-gradient .link-label {
+    background-image: linear-gradient(90deg, #0B0F2E 0%, #D9694A 50%, #F0C17A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-decoration-color: #D9694A; /* visible underline under gradient text */
+  }
+}
