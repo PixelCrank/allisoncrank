@@ -86,10 +86,6 @@ export default function CVPage() {
               <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">LinkedIn</span>
             </a>
             {' · '}
-            <a href="/" className="hover-link-gradient inline-flex items-baseline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20">
-              <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">allisoncrank.com</span>
-            </a>
-            {' · '}
             <a href="https://crankstudio.io" target="_blank" rel="noreferrer" className="hover-link-gradient inline-flex items-baseline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20">
               <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">crankstudio.io</span>
             </a>
