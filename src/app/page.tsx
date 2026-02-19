@@ -8,7 +8,8 @@ import DesignerCursor from './DesignerCursor';
 import { FooterSecret } from '@/components/EasterEggs';
 import CrankCTAButton from '@/components/CrankCTAButton';
 import ParisHeaderRow from '@/components/ParisHeaderRow';
-import pixeldog from '../../images/pixii.png';
+import pixeldog from '../../images/pixeldog.png';
+import PixelTooltip from '@/components/PixelTooltip';
 
 export const metadata: Metadata = {
   title: 'Allison Crank',
@@ -163,13 +164,14 @@ export default function AllisonPage() {
           </p>
           <p className="stagger-paragraph" style={{ '--i': '4' } as React.CSSProperties}>
             I&apos;ve taught at the Architectural Association Visiting School in Melbourne
-            (four editions) and at{' '}
-            <Link href="https://307archtheory.crankstudio.io/" className="text-[#737373]">HSLU in Lucerne</Link>
-            , where I teach spatial design and architectural theory. I also mentor at the
-            Venice Biennale College Cinema — most recently for the 2026 edition.
+            (four editions), at{' '}
+            <Link href="https://www.hslu.ch/en/lucerne-school-of-design-film-and-art/degree-programmes/bachelor/spatial-design/" className="text-[#737373]">HSLU in Lucerne</Link>
+            , and as an expert lecturer on the{' '}
+            <Link href="https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/" className="text-[#737373]">MIT xPRO Virtual Reality &amp; Augmented Reality programme</Link>
+            . I also mentor at the Venice Biennale College Cinema — most recently for the 2026 edition.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '5' } as React.CSSProperties}>
-            I design for how people feel, move, and make meaning in complex, hybrid worlds.
+            I design for how people feel, move, and make meaning in complex, hybrid worlds. I&apos;m based in Paris with my Pomeranian, <PixelTooltip src={pixeldog} /> — who has strong opinions about nap architecture and approves of very little.
           </p>
         </div>
 

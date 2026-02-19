@@ -199,6 +199,12 @@ export default function CVPage() {
           links={[{ label: '307archtheory.crankstudio.io', href: 'https://307archtheory.crankstudio.io/' }]}
         />
         <Row
+          year="2022 – Present"
+          title="Expert Lecturer — MIT xPRO, Virtual Reality &amp; Augmented Reality"
+          detail="Industry expert on the MIT xPRO online programme covering XR design, UX, and immersive experience development."
+          links={[{ label: 'MIT xPRO', href: 'https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/' }]}
+        />
+        <Row
           year="2019 – 2024"
           title="Visiting Faculty — Architectural Association Visiting School, Melbourne"
           detail="Digital twins, procedural urbanism, speculative design, Unity + GAMA."
