@@ -198,7 +198,7 @@ export default function AllisonPage() {
             Biennale College Cinema — most recently for the 2026 edition.
           </p>
           <p className="stagger-paragraph italic" style={{ '--i': '5' } as React.CSSProperties}>
-            She designs for how people feel, move, and make meaning in complex, hybrid worlds. Offline, she&apos;s usually roaming Paris with <PixelTooltip src={pixeldog} />, her Pomeranian — an exacting authority on nap architecture.
+            I design for how people feel, move, and make meaning in complex, hybrid worlds. Offline, I&apos;m usually roaming Paris with <PixelTooltip src={pixeldog} />, my Pomeranian — an exacting authority on nap architecture.
           </p>
         </div>
 
