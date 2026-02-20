@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     template: '%s — Allison Crank',
   },
   description:
-    'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+    'Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
   keywords: [
     'Allison Crank',
     'interaction designer',
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Allison Crank',
     description:
-      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+      'Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
     url: 'https://allisoncrank.com',
     siteName: 'Allison Crank',
     locale: 'en_US',
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
         url: '/images/og.png',
         width: 1200,
         height: 630,
-        alt: 'Allison Crank — interaction designer and researcher',
+        alt: 'Allison Crank — Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris',
       },
     ],
   },
