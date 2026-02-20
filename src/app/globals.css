@@ -15,6 +15,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-neuzeit), sans-serif;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -202,5 +203,81 @@ body {
     color: transparent;
     -webkit-text-fill-color: transparent;
     text-decoration-color: #D9694A; /* visible underline under gradient text */
+  }
+}
+
+/* ── Print styles ───────────────────────────────────────────────────── */
+@media print {
+  /* Hide interactive / decorative chrome */
+  .no-print,
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+
+  /* Reset page */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    overflow: visible !important;
+  }
+
+  /* Ensure all animated elements are fully visible */
+  .fade-in,
+  .stagger-paragraph,
+  .scale-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+
+  /* Strip all glass / blur effects */
+  .liquid-glass,
+  .dark-glass {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+
+  /* Links: plain black, no gradient */
+  a,
+  a:visited {
+    color: #000 !important;
+    text-decoration: underline !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  .link-label {
+    background-image: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  /* Append URL after links so PDF is useful */
+  a[href^="http"]::after,
+  a[href^="mailto"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666 !important;
+    -webkit-text-fill-color: #666 !important;
+    font-weight: 300;
+  }
+
+  /* Page break control */
+  h2 {
+    break-after: avoid;
+  }
+
+  .fade-in {
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 18mm 18mm 18mm 18mm;
   }
 }

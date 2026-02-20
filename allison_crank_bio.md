@@ -6,7 +6,7 @@ Born in the United States, she studied architecture at [Wellesley College](https
 
 Allison’s work spans mixed reality, AI‑driven interfaces, spatial computing, and narrative systems. She has collaborated with **National Geographic**, **Google**, **Meta**, **MIT Media Lab**, **La Biennale di Venezia**, and **Dreamscape**, creating experiences that explore how people perceive, move, and feel in digital–physical worlds.
 
-Her projects have been presented at the **Venice Film Festival**, **Cannes**, **Tribeca**, and **Annecy**. She was Lead Interaction Designer on **[IMPULSE](https://impulse-xr.io/)**, an Emmy Award–winning XR experience about neurodiversity and perception, and her approach to immersive design has been profiled in **[XRMust](https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/)**.
+Her projects have been presented at the **Venice Film Festival**, **Cannes**, **Tribeca**, and **Annecy**. She was Lead Interaction Designer on **[IMPULSE](https://impulse-xr.io/)**, an Emmy-nominated XR experience about neurodiversity and perception, and her approach to immersive design has been profiled in **[XRMust](https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/)**.
 
 She has led the design of platforms and systems including  
 **LazyBrain** — an emotionally intelligent AI system for creative cognition and neurodiversity  

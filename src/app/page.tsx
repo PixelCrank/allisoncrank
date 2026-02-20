@@ -14,7 +14,7 @@ import PixelTooltip from '@/components/PixelTooltip';
 export const metadata: Metadata = {
   title: 'Allison Crank',
   description:
-    'Designer and researcher based in Paris. Founder of Crank Studio. Working at the intersection of architecture, immersive technology, and intelligent systems.',
+    'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working at the intersection of architecture, immersive technology, and intelligent systems.',
 };
 
 function Link({ href, children, className = '' }: { href: string; children: React.ReactNode; className?: string }) {
@@ -23,7 +23,7 @@ function Link({ href, children, className = '' }: { href: string; children: Reac
     <a
       href={href}
       {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
-      className={`hover-link-gradient inline-flex items-baseline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20 ${className}`}
+      className={`hover-link-gradient inline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20 ${className}`}
     >
       <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">{children}</span>
     </a>
@@ -126,7 +126,7 @@ export default function AllisonPage() {
         {/* ── Bio ─────────────────────────────────────────────────────────── */}
         <div className="mt-14 space-y-5 text-[clamp(1rem,2vw,1.1rem)] font-light leading-relaxed text-[#737373]">
           <p className="stagger-paragraph" style={{ '--i': '0' } as React.CSSProperties}>
-            I&apos;m a designer and researcher based in Paris, originally trained as an
+            I&apos;m an Emmy-nominated interaction designer and researcher based in Paris, originally trained as an
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
             Eindhoven, and Design for Digital Innovation at EPFL and ECAL. In 2020 I launched{' '}
             <Link href="https://crankstudio.io" className="text-[#737373]">Crank Studio</Link>

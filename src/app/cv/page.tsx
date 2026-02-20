@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ScrollAnimations from '../ScrollAnimations';
 import DesignerCursor from '../DesignerCursor';
+import PrintButton from '@/components/PrintButton';
 
 export const metadata: Metadata = {
   title: 'CV — Allison Crank',
@@ -69,6 +70,12 @@ export default function CVPage() {
 
         {/* ── Header ──────────────────────────────────────────────────────── */}
         <header className="mb-14">
+          <a
+            href="/"
+            className="no-print hover-link-gradient inline-flex items-baseline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20 text-xs text-[#c0c0c0] font-light mb-6 block"
+          >
+            <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">← allisoncrank.com</span>
+          </a>
           <p className="text-xs uppercase tracking-[0.2em] text-[#a3a3a3] mb-3">Curriculum Vitae</p>
           <h1
             className="text-[clamp(2rem,4.5vw,3rem)] leading-[0.96] font-light tracking-tight mb-5"
@@ -156,7 +163,7 @@ export default function CVPage() {
         {[
           { year: '2025–', title: 'CultureCare', detail: 'UX and game design consultant. Clinical trials in preparation.', links: [{ label: 'culturecare.io', href: 'https://culturecare.io' }] },
           { year: '2025', title: 'Audemars Piguet', detail: 'Research and data visualisation for the innovation team — video game industry landscape analysis and strategic interaction concepts.' },
-          { year: '2024–25', title: 'Diverssity — My Magic Room', detail: 'Full game designer and director. MR therapeutic game for neurodiverse adolescents on Meta Quest. Clinical trials in progress.', links: [{ label: 'my-magic-room.io', href: 'https://www.my-magic-room.io/en/' }] },
+          { year: '2024–25', title: 'My Magic Room', sub: 'DiverSsiTy · Swiss healthtech startup', detail: 'Full game designer and director. Mixed-reality therapeutic game for neurodiverse adolescents (ASD/ADHD, ages 13–20) on Meta Quest — fostering social, cognitive, emotional, and sensorimotor skills through adaptive gameplay. Clinical trials in progress.', links: [{ label: 'my-magic-room.io', href: 'https://www.my-magic-room.io/en/' }] },
           { year: '2024–25', title: 'LazyBrain', detail: 'UX Designer and Product Lead. AI-driven community platform.', links: [{ label: 'lazybrain.ai', href: 'https://lazybrain.ai' }] },
           { year: '2024', title: 'Apple Vision Pro × National Geographic "HOME" (Factory 42)', detail: 'Lead research and experience design for a spatial storytelling concept. Project cancelled pre-release.' },
           { year: '2023–25', title: 'Dreamscape Immersive — Multiplayer VR Classroom', detail: 'UX designer and systems advisor — multiplayer VR classroom experience design. Via Albyon 2023–24; direct engagement 2025.' },
@@ -166,7 +173,7 @@ export default function CVPage() {
           { year: '2021', title: 'Glimpse (Electric Skies)', detail: 'Interaction Design Lead and Line Production. Animated interactive VR experience starring Taron Egerton and Lucy Boynton, directed by Benjamin Cleary. Premiered Venice Biennale 2021. Won Best Interactive Experience at Cannes XR and VR Cristal at Annecy.', links: [{ label: 'electricskies.io/glimpse', href: 'https://www.electricskies.io/glimpse' }] },
           { year: '2020–23', title: 'Pixt — Google News Initiative', detail: 'Head of UX Design and Research. AI-driven trust and verification platform for digital media, funded by the Google News Initiative.', links: [{ label: 'trust.pixt.co', href: 'https://trust.pixt.co/' }] },
         ].map((p) => (
-          <Row key={p.title} year={p.year} title={p.title} detail={p.detail} links={p.links} />
+          <Row key={p.title} year={p.year} title={p.title} sub={p.sub} detail={p.detail} links={p.links} />
         ))}
 
         {/* ── Education ───────────────────────────────────────────────────── */}
@@ -290,12 +297,9 @@ export default function CVPage() {
           <p className="text-xs text-[#c0c0c0] font-light">
             References available upon request
           </p>
-          <a
-            href="/"
-            className="hover-link-gradient inline-flex items-baseline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20 text-xs text-[#a3a3a3] font-light"
-          >
-            <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">← allisoncrank.com</span>
-          </a>
+          <div className="flex flex-wrap gap-4 items-center">
+            <PrintButton />
+          </div>
         </div>
 
       </div>
