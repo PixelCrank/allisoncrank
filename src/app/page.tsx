@@ -192,7 +192,7 @@ export default function AllisonPage() {
             , and as an expert lecturer on the{' '}
             <Link href="https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/" className="text-[#555555]">MIT xPRO Virtual Reality &amp; Augmented Reality programme</Link>
             . In 2022 I served as curator of{' '}
-            <Link href="https://www.raum-welten.com/" className="text-[#555555]">Raumwelten</Link>
+            <Link href="https://amcrs.de/en/raumwelten-platform-for-scenography-architecture-and-media-2022/" className="text-[#555555]">Raumwelten</Link>
             {' '}— Germany&apos;s leading festival for scenography, architecture, and media — directing
             its 11th edition around the theme <em>/imagine</em>. I also mentor at the Venice
             Biennale College Cinema — most recently for the 2026 edition.
