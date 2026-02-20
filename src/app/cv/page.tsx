@@ -180,7 +180,7 @@ export default function CVPage() {
           { year: '2024', title: 'Apple Vision Pro × National Geographic "HOME" (Factory 42)', detail: 'Lead research and experience design for a spatial storytelling concept. Project cancelled pre-release.' },
           { year: '2023–25', title: 'Dreamscape Immersive — Multiplayer VR Classroom', detail: 'UX designer and systems advisor — multiplayer VR classroom experience design. Via Albyon 2023–24; direct engagement 2025.' },
           { year: '2022–23', title: 'IMPULSE: Playing with Reality (Anagram × Meta)', detail: 'Lead interaction designer on a 40-minute mixed reality experience narrated by Academy Award-winner Tilda Swinton — placing audiences inside the minds of four people living with ADHD, transforming their physical surroundings in real time. Winner, Venice Immersive Achievement Award (81st Venice IFF, 2024); nominated for Emmy Award — Outstanding Emerging Media Program. Shown at Tribeca. Available on Meta Quest.', links: [{ label: 'impulse-xr.io', href: 'https://impulse-xr.io/' }, { label: 'Meta Quest', href: 'https://www.meta.com/en-gb/experiences/impulse-playing-with-reality/6468391126573976/' }] },
-          { year: '2022 –', title: 'Gallagher & Associates — Gilcrease Museum', detail: 'Head of UX for a landmark cultural project: the entirely new $83.6M Gilcrease Museum in Tulsa, Oklahoma — home to the world\'s largest collection of art of the American West. Designed interactive gallery stations and mobile visitor experiences for the new SmithGroup-designed building, opening 2027.' },
+          { year: '2022–', title: 'Gallagher & Associates — Gilcrease Museum', detail: 'Head of UX for a landmark cultural project: the entirely new $83.6M Gilcrease Museum in Tulsa, Oklahoma — home to the world\'s largest collection of art of the American West. Designed interactive gallery stations and mobile visitor experiences for the new SmithGroup-designed building, opening 2027.' },
           { year: '2022', title: 'Raumwelten – Platform for Scenography, Architecture & Media', detail: 'Curator of the 11th edition of Germany\'s leading festival for scenography, architecture, and media. Directed the programme around the theme /imagine, focusing on immersion and online social experience. Co-created and built the Raumwelten VR Hub — a digital multi-user environment accessible across mobile, desktop, and virtual reality — with a companion pop-up exhibition at the Ludwigsburg Museum. November 16–18, 2022.' },
           { year: '2021', title: 'Glimpse (Electric Skies)', detail: 'Interaction Design Lead and Line Production. Animated interactive VR experience starring Taron Egerton and Lucy Boynton, directed by Benjamin Cleary. Premiered Venice Biennale 2021. Won Best Interactive Experience at Cannes XR and VR Cristal at Annecy.', links: [{ label: 'electricskies.io/glimpse', href: 'https://www.electricskies.io/glimpse' }] },
           { year: '2020–23', title: 'Pixt — Google News Initiative', detail: 'Head of UX Design and Research. AI-driven trust and verification platform for digital media, funded by the Google News Initiative.', links: [{ label: 'trust.pixt.co', href: 'https://trust.pixt.co/' }] },
@@ -240,7 +240,7 @@ export default function CVPage() {
 
         {[
           { year: '2024', title: 'ArtTech Forum', sub: 'Keynote' },
-          { year: '2022', title: 'Raumwelten Festival', sub: 'Keynote' },
+          { year: '2022', title: 'Raumwelten Festival', sub: 'Curator & Speaker' },
           { year: '2018', title: 'SIGGRAPH', sub: 'Paper presentation' },
           { year: '2017', title: 'Tate Exchange, London' },
           { year: '2016', title: 'Gottlieb Duttweiler Institute (GDI)' },
@@ -285,7 +285,7 @@ export default function CVPage() {
 
         {[
           { year: '2025', title: 'Emmy Nomination — Outstanding Emerging Media Program · IMPULSE', sub: 'As Interaction Design Lead' },
-          { year: '2024', title: 'Venice Immersive Achievement Prize — La Biennale di Venezia · IMPULSE', sub: 'As Interaction Design Lead' },
+          { year: '2024', title: 'Venice Immersive Achievement Award — La Biennale di Venezia · IMPULSE', sub: 'As Interaction Design Lead' },
           { year: '2021', title: 'Best Interactive Experience — Cannes XR · Glimpse', sub: 'As Interaction Design Lead' },
           { year: '2021', title: 'VR Cristal — Annecy International Film Festival · Glimpse', sub: 'As Interaction Design Lead' },
         ].map((a) => (

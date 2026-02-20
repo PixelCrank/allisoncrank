@@ -192,7 +192,7 @@ export default function AllisonPage() {
             <Link href="https://www.hslu.ch/en/lucerne-school-of-design-film-and-art/degree-programmes/bachelor/spatial-design/" className="text-[#737373]">HSLU in Lucerne</Link>
             , and as an expert lecturer on the{' '}
             <Link href="https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/" className="text-[#737373]">MIT xPRO Virtual Reality &amp; Augmented Reality programme</Link>
-            In 2022 I served as curator of{' '}
+            . In 2022 I served as curator of{' '}
             <Link href="https://www.raum-welten.com/" className="text-[#737373]">Raumwelten</Link>
             {' '}— Germany&apos;s leading festival for scenography, architecture, and media — directing
             its 11th edition around the theme <em>/imagine</em>. I also mentor at the Venice
