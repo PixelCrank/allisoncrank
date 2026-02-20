@@ -166,13 +166,10 @@ export default function AllisonPage() {
             and the VR Cristal at Annecy after premiering at Venice. She has also designed
             therapeutic games for neurodiverse adolescents currently entering clinical
             trials, and culture-care systems for hospitals and museums.
+            Collaborators include National Geographic, Google News Initiative, Meta, Audemars Piguet,
+            Dreamscape, and MIT.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '2' } as React.CSSProperties}>
-            Past collaborators include National Geographic, Google News Initiative, Meta, Audemars Piguet,
-            Dreamscape, and MIT. Projects have premiered at Venice,
-            Cannes, Tribeca, and Annecy.
-          </p>
-          <p className="stagger-paragraph" style={{ '--i': '3' } as React.CSSProperties}>
             Before Crank Studio she was Head of Digital Experiences at{' '}
             <Link href="https://wowl.ch" className="text-[#555555]">wowl</Link>
             , and a researcher at the{' '}
@@ -185,7 +182,7 @@ export default function AllisonPage() {
             and her practice has been profiled by{' '}
             <Link href="https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/" className="text-[#555555]">XRMust</Link>.
           </p>
-          <p className="stagger-paragraph" style={{ '--i': '4' } as React.CSSProperties}>
+          <p className="stagger-paragraph" style={{ '--i': '3' } as React.CSSProperties}>
             She has taught at the Architectural Association Visiting School in Melbourne
             (four editions), at{' '}
             <Link href="https://www.hslu.ch/en/lucerne-school-of-design-film-and-art/degree-programmes/bachelor/spatial-design/" className="text-[#555555]">HSLU in Lucerne</Link>
@@ -197,7 +194,7 @@ export default function AllisonPage() {
             its 11th edition around the theme <em>/imagine</em>. She also mentors at the Venice
             Biennale College Cinema — most recently for the 2026 edition.
           </p>
-          <p className="stagger-paragraph italic" style={{ '--i': '5' } as React.CSSProperties}>
+          <p className="stagger-paragraph italic" style={{ '--i': '4' } as React.CSSProperties}>
             I design for how people feel, move, and make meaning in complex, hybrid worlds. Offline, I&apos;m usually roaming Paris with <PixelTooltip src={pixeldog} />, my Pomeranian — an exacting authority on nap architecture.
           </p>
         </div>
@@ -229,6 +226,8 @@ export default function AllisonPage() {
           <p className="text-sm text-[#a3a3a3] font-light">
             Direct inquiries —{' '}
             <Link href="mailto:hi@allisoncrank.com" className="text-[#555555]">hi@allisoncrank.com</Link>
+            {' · '}
+            <Link href="https://www.linkedin.com/in/allison-crank-53366b34" className="text-[#555555]">LinkedIn</Link>
           </p>
         </div>
 
