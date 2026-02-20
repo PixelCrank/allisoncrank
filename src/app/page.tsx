@@ -130,7 +130,7 @@ export default function AllisonPage() {
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
             Eindhoven, and Design for Digital Innovation at EPFL and ECAL. In 2020 I launched{' '}
             <Link href="https://crankstudio.io" className="text-[#737373]">Crank Studio</Link>
-            {' '}— a practice devoted to experiences where design feels precise, human, and alive. Formally incorporated in 2024.
+            {' '}— a practice designing digital, spatial, and interactive experiences for culture, research, and organizations navigating emerging technology. The kind where you don’t notice the interface, only the idea. Formally incorporated in 2024.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '1' } as React.CSSProperties}>
             My work spans XR, VR, MR, game design, AI-driven interfaces, and spatial
@@ -186,10 +186,10 @@ export default function AllisonPage() {
             className="h-7 w-auto opacity-90"
           />
           <p className="text-[clamp(1.05rem,2.1vw,1.25rem)] font-light leading-relaxed text-[#404040] max-w-[58ch]">
-            Project work — XR, VR, MR, game design, AI interfaces, and spatial
-            experiences for cultural institutions, research organizations, and industry —
-            is through{' '}
-            <Link href="https://crankstudio.io">Crank Studio</Link>.
+            <Link href="https://crankstudio.io">Crank Studio</Link>{' '}
+            is brought in when the stakes are high — when an experience needs to be
+            intuitive for the public, credible for experts, and built to last beyond
+            a single moment.
           </p>
           <CrankCTAButton />
         </div>

@@ -119,7 +119,7 @@ export default function CVPage() {
           year="2020 – Present"
           title="Founder and Creative Director — Crank Studio"
           sub="Paris, France · Independent practice 2020–2024; formally incorporated Fall 2024"
-          detail="Original IP, client experience design, and strategic collaborations across VR, AR, spatial computing, and AI-driven platforms."
+          detail="Digital, spatial, and interactive experiences for cultural institutions, research teams, and organizations navigating emerging technology. Brought in when the stakes are high — when work needs to be intuitive for the public, credible for experts, and built to last."
           links={[{ label: 'crankstudio.io', href: 'https://crankstudio.io' }]}
         />
         <Row
@@ -161,7 +161,7 @@ export default function CVPage() {
         <SectionLabel>Selected Projects</SectionLabel>
 
         {[
-          { year: '2025–', title: 'CultureCare', detail: 'UX and game design consultant. Clinical trials in preparation.', links: [{ label: 'culturecare.io', href: 'https://culturecare.io' }] },
+          { year: '2025–', title: 'Culture Care', detail: 'UX and game design consultant. Clinical trials in preparation.', links: [{ label: 'culturecare.io', href: 'https://culturecare.io' }] },
           { year: '2025', title: 'Audemars Piguet', detail: 'Research and data visualisation for the innovation team — video game industry landscape analysis and strategic interaction concepts.' },
           { year: '2024–25', title: 'My Magic Room', sub: 'DiverSsiTy · Swiss healthtech startup', detail: 'Full game designer and director. Mixed-reality therapeutic game for neurodiverse adolescents (ASD/ADHD, ages 13–20) on Meta Quest — fostering social, cognitive, emotional, and sensorimotor skills through adaptive gameplay. Clinical trials in progress.', links: [{ label: 'my-magic-room.io', href: 'https://www.my-magic-room.io/en/' }] },
           { year: '2024–25', title: 'LazyBrain', detail: 'UX Designer and Product Lead. AI-driven community platform.', links: [{ label: 'lazybrain.ai', href: 'https://lazybrain.ai' }] },

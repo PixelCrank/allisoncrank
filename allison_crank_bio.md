@@ -14,7 +14,7 @@ She has led the design of platforms and systems including
 **Polaris** — early research into a community‑driven news environment  
 Alongside virtual festivals, museum interactives, AI‑driven creative tools, and spatial interfaces for clients such as **Audemars Piguet**.
 
-Allison is also the founder of **[Crank Studio](https://crank.studio/)**, a Paris‑based practice working across luxury, culture, and care — from mixed‑reality games for neurodiverse teenagers with **[DiverSsiTy](https://diverssity.io/)** to cultural regeneration strategies such as **[CultureCare](https://culture-care.vercel.app/index.html)**.
+Allison is also the founder of **[Crank Studio](https://crank.studio/)**, a Paris‑based practice working across luxury, culture, and care — from mixed‑reality games for neurodiverse teenagers with **[DiverSsiTy](https://diverssity.io/)** to cultural regeneration strategies such as **[Culture Care](https://culture-care.vercel.app/index.html)**.
 
 Previously, she was **Head of Digital Experiences** at [wowl](https://wowl.ch/), designing immersive storytelling for Omega, Rolex, and SWISS, and a **Design Researcher** at the [EPFL+ECAL Lab](https://www.epfl.ch/labs/epflecal-lab/), contributing to the UNESCO‑recognized Montreux Jazz digital archive.
 
