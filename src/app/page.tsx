@@ -151,7 +151,7 @@ export default function AllisonPage() {
           <p className="stagger-paragraph" style={{ '--i': '0' } as React.CSSProperties}>
             I&apos;m an Emmy-nominated interaction designer and researcher based in Paris, originally trained as an
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
-            Eindhoven, and Design for Digital Innovation at EPFL and ECAL. In 2020 I launched{' '}
+            Eindhoven, and Design for Digital Innovation at EPFL and ECAL in Lausanne, Switzerland. In 2020 I launched{' '}
             <Link href="https://crankstudio.io" className="text-[#737373]">Crank Studio</Link>
             {' '}— a practice designing digital, spatial, and interactive experiences for culture, research, and organizations navigating emerging technology. The kind where you don’t notice the interface, only the idea. Formally incorporated in 2024.
           </p>

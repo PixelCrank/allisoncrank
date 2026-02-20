@@ -2,7 +2,7 @@
 
 Allison Crank is a designer and researcher working between architecture, immersive technology, and intelligent systems.
 
-Born in the United States, she studied architecture at [Wellesley College](https://www.wellesley.edu/) and [MIT](https://www.mit.edu/). She later earned graduate degrees from the **Design Academy Eindhoven** (MA Contextual Design, *cum laude*) and **EPFL** (MSc Design for Digital Innovation). She has lived and worked in the Netherlands, Switzerland, France, Denmark, and the United States.
+Born in the United States, she studied architecture at [Wellesley College](https://www.wellesley.edu/) and [MIT](https://www.mit.edu/). She later earned graduate degrees from the **Design Academy Eindhoven** (MA Contextual Design, *cum laude*) and **EPFL** (MSc Design for Digital Innovation) in Lausanne, Switzerland. She has lived and worked in the Netherlands, Switzerland, France, Denmark, and the United States.
 
 Allison’s work spans mixed reality, AI‑driven interfaces, spatial computing, and narrative systems. She has collaborated with **National Geographic**, **Google**, **Meta**, **MIT Media Lab**, **La Biennale di Venezia**, and **Dreamscape**, creating experiences that explore how people perceive, move, and feel in digital–physical worlds.
 
