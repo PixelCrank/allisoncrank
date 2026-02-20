@@ -14,14 +14,14 @@ import PixelTooltip from '@/components/PixelTooltip';
 export const metadata: Metadata = {
   title: 'Allison Crank',
   description:
-    'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+    'Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
   alternates: {
     canonical: 'https://allisoncrank.com',
   },
   openGraph: {
     title: 'Allison Crank',
     description:
-      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+      'Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
     url: 'https://allisoncrank.com',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Allison Crank',
     description:
-      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio.',
+      'Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris. Founder of Crank Studio.',
     images: ['/images/og.png'],
   },
 };

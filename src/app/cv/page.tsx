@@ -120,7 +120,7 @@ export default function CVPage() {
           She has served as curator of Raumwelten — Germany's leading festival for scenography
           and media — and mentors creators at the Venice VR College at La Biennale di Venezia.
           <br /><br />
-          Clients include National Geographic, Meta, Google, MIT, Dreamscape, Audemars Piguet,
+          Clients include National Geographic, Meta, Google News Initiative, MIT, Dreamscape, Audemars Piguet,
           and Gallagher & Associates. Published in <em>Leonardo</em> (MIT Press).
         </p>
 
