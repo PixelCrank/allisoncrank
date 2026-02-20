@@ -116,7 +116,6 @@ export const metadata: Metadata = {
     title: 'Allison Crank',
     description:
       'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio.',
-    creator: '@allisoncrank',
     images: ['/images/og.png'],
   },
 };
