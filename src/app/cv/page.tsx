@@ -48,8 +48,8 @@ function Row({
       )}
       <div className={!year ? 'sm:col-span-2' : ''}>
         <p className="text-[0.95rem] text-[#1a1a1a] leading-snug font-normal">{title}</p>
-        {sub && <p className="text-sm text-[#737373] font-light mt-0.5">{sub}</p>}
-        {detail && <p className="text-sm text-[#737373] font-light mt-0.5 leading-relaxed">{detail}</p>}
+        {sub && <p className="text-sm text-[#555555] font-light mt-0.5">{sub}</p>}
+        {detail && <p className="text-sm text-[#555555] font-light mt-0.5 leading-relaxed">{detail}</p>}
         {links && links.length > 0 && (
           <p className="text-sm font-light mt-1 flex flex-wrap gap-x-3 gap-y-0.5">
             {links.map((l) => (
@@ -90,7 +90,7 @@ export default function CVPage() {
           >
             Allison Crank
           </h1>
-          <p className="text-sm text-[#737373] font-light leading-relaxed max-w-[52ch]">
+          <p className="text-sm text-[#555555] font-light leading-relaxed max-w-[52ch]">
             Paris, France<br />
             <a href="mailto:hi@allisoncrank.com" className="hover-link-gradient inline-flex items-baseline rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-black/20">
               <span className="link-label underline decoration-1 underline-offset-[3px] decoration-current/40">hi@allisoncrank.com</span>

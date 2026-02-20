@@ -147,21 +147,21 @@ export default function AllisonPage() {
         <ParisHeaderRow headshotSrc={headshot} pixelSrc={pixeldog} />
 
         {/* ── Bio ─────────────────────────────────────────────────────────── */}
-        <div className="mt-14 space-y-5 text-[clamp(1rem,2vw,1.1rem)] font-light leading-relaxed text-[#737373]">
+        <div className="mt-14 space-y-5 text-[clamp(1rem,2vw,1.1rem)] font-light leading-relaxed text-[#555555]">
           <p className="stagger-paragraph" style={{ '--i': '0' } as React.CSSProperties}>
             I&apos;m an Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris, originally trained as an
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
             Eindhoven, and Design for Digital Innovation at EPFL and ECAL in Lausanne, Switzerland. In 2020 I launched{' '}
-            <Link href="https://crankstudio.io" className="text-[#737373]">Crank Studio</Link>
+            <Link href="https://crankstudio.io" className="text-[#555555]">Crank Studio</Link>
             {' '}— a practice designing digital, spatial, and interactive experiences for culture, research, and organizations navigating emerging technology. The kind where you don’t notice the interface, only the idea. Formally incorporated in 2024.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '1' } as React.CSSProperties}>
             My work spans XR — VR, MR, and spatial computing — game design, and AI-driven interfaces. I was lead interaction designer on{' '}
-            <em><Link href="https://impulse-xr.io/" className="text-[#737373]">IMPULSE</Link></em>
+            <em><Link href="https://impulse-xr.io/" className="text-[#555555]">IMPULSE</Link></em>
             , a 40-minute mixed-reality experience narrated by Academy Award-winner Tilda Swinton
             — winner of the Venice Immersive Achievement Prize and nominated for an Emmy —
             placing audiences inside the minds of four people living with ADHD. And on{' '}
-            <em><Link href="https://www.electricskies.io/glimpse" className="text-[#737373]">Glimpse</Link></em>
+            <em><Link href="https://www.electricskies.io/glimpse" className="text-[#555555]">Glimpse</Link></em>
             , an animated VR experience that won Best Interactive Experience at Cannes XR
             and the VR Cristal at Annecy after premiering at Venice. I&apos;ve also designed
             therapeutic games for neurodiverse adolescents currently entering clinical
@@ -174,25 +174,25 @@ export default function AllisonPage() {
           </p>
           <p className="stagger-paragraph" style={{ '--i': '3' } as React.CSSProperties}>
             Before Crank Studio I was Head of Digital Experiences at{' '}
-            <Link href="https://wowl.ch" className="text-[#737373]">wowl</Link>
+            <Link href="https://wowl.ch" className="text-[#555555]">wowl</Link>
             , and a researcher at the{' '}
-            <Link href="https://epfl-ecal-lab.ch" className="text-[#737373]">EPFL+ECAL Lab</Link>
+            <Link href="https://epfl-ecal-lab.ch" className="text-[#555555]">EPFL+ECAL Lab</Link>
             {' '}where I worked on the UNESCO-recognized{' '}
-            <Link href="https://www.epfl.ch/innovation/domains/fr/centre-dinnovation-dans-les-patrimoines-culturels/projet-montreux-jazz-digital/" className="text-[#737373]">
+            <Link href="https://www.epfl.ch/innovation/domains/fr/centre-dinnovation-dans-les-patrimoines-culturels/projet-montreux-jazz-digital/" className="text-[#555555]">
               Montreux Jazz digital archive
             </Link>
             . My research has appeared in <em>Leonardo</em> (MIT Press) and at SIGGRAPH,
             and my practice has been profiled by{' '}
-            <Link href="https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/" className="text-[#737373]">XRMust</Link>.
+            <Link href="https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/" className="text-[#555555]">XRMust</Link>.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '4' } as React.CSSProperties}>
             I&apos;ve taught at the Architectural Association Visiting School in Melbourne
             (four editions), at{' '}
-            <Link href="https://www.hslu.ch/en/lucerne-school-of-design-film-and-art/degree-programmes/bachelor/spatial-design/" className="text-[#737373]">HSLU in Lucerne</Link>
+            <Link href="https://www.hslu.ch/en/lucerne-school-of-design-film-and-art/degree-programmes/bachelor/spatial-design/" className="text-[#555555]">HSLU in Lucerne</Link>
             , and as an expert lecturer on the{' '}
-            <Link href="https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/" className="text-[#737373]">MIT xPRO Virtual Reality &amp; Augmented Reality programme</Link>
+            <Link href="https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/" className="text-[#555555]">MIT xPRO Virtual Reality &amp; Augmented Reality programme</Link>
             . In 2022 I served as curator of{' '}
-            <Link href="https://www.raum-welten.com/" className="text-[#737373]">Raumwelten</Link>
+            <Link href="https://www.raum-welten.com/" className="text-[#555555]">Raumwelten</Link>
             {' '}— Germany&apos;s leading festival for scenography, architecture, and media — directing
             its 11th edition around the theme <em>/imagine</em>. I also mentor at the Venice
             Biennale College Cinema — most recently for the 2026 edition.
@@ -225,7 +225,7 @@ export default function AllisonPage() {
         <div className="fade-in mt-14 pt-10 border-t border-black/8">
           <p className="text-sm text-[#a3a3a3] font-light">
             Direct inquiries —{' '}
-            <Link href="mailto:hi@allisoncrank.com" className="text-[#737373]">hi@allisoncrank.com</Link>
+            <Link href="mailto:hi@allisoncrank.com" className="text-[#555555]">hi@allisoncrank.com</Link>
           </p>
         </div>
 

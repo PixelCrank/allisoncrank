@@ -60,7 +60,7 @@ body {
     opacity 0.9s var(--liquid-ease),
     transform 1s var(--liquid-ease),
     filter 0.8s var(--liquid-ease-out);
-  transition-delay: calc(var(--i, 0) * 0.15s);
+  transition-delay: calc(var(--i, 0) * 0.10s);
 }
 .stagger-paragraph.visible {
   opacity: 1;
