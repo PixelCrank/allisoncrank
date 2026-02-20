@@ -149,15 +149,14 @@ export default function AllisonPage() {
         {/* ── Bio ─────────────────────────────────────────────────────────── */}
         <div className="mt-14 space-y-5 text-[clamp(1rem,2vw,1.1rem)] font-light leading-relaxed text-[#737373]">
           <p className="stagger-paragraph" style={{ '--i': '0' } as React.CSSProperties}>
-            I&apos;m an Emmy-nominated interaction designer and researcher based in Paris, originally trained as an
+            I&apos;m an Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris, originally trained as an
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
             Eindhoven, and Design for Digital Innovation at EPFL and ECAL in Lausanne, Switzerland. In 2020 I launched{' '}
             <Link href="https://crankstudio.io" className="text-[#737373]">Crank Studio</Link>
             {' '}— a practice designing digital, spatial, and interactive experiences for culture, research, and organizations navigating emerging technology. The kind where you don’t notice the interface, only the idea. Formally incorporated in 2024.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '1' } as React.CSSProperties}>
-            My work spans XR, VR, MR, game design, AI-driven interfaces, and spatial
-            computing. I was lead interaction designer on{' '}
+            My work spans XR — VR, MR, and spatial computing — game design, and AI-driven interfaces. I was lead interaction designer on{' '}
             <em><Link href="https://impulse-xr.io/" className="text-[#737373]">IMPULSE</Link></em>
             , a 40-minute mixed-reality experience narrated by Academy Award-winner Tilda Swinton
             — winner of the Venice Immersive Achievement Prize and nominated for an Emmy —
@@ -170,7 +169,7 @@ export default function AllisonPage() {
           </p>
           <p className="stagger-paragraph" style={{ '--i': '2' } as React.CSSProperties}>
             Past collaborators include National Geographic, Google News Initiative, Meta, Audemars Piguet,
-            Dreamscape, La Biennale di Venezia, and MIT. Projects have premiered at Venice,
+            Dreamscape, and MIT. Projects have premiered at Venice,
             Cannes, Tribeca, and Annecy.
           </p>
           <p className="stagger-paragraph" style={{ '--i': '3' } as React.CSSProperties}>
