@@ -203,16 +203,16 @@ export default function AllisonPage() {
         </div>
 
         {/* ── Studio CTA ──────────────────────────────────────────────────── */}
-        <div className="scale-reveal mt-14 rounded-2xl liquid-glass p-6 sm:p-8 space-y-4">
+        <div className="scale-reveal mt-14 rounded-2xl bg-[#0B0F2E] border border-white/10 p-6 sm:p-8 space-y-4">
           <Image
             src={crankLogo}
             alt="Crank Studio"
             width={120}
             height={36}
             unoptimized
-            className="h-7 w-auto opacity-90"
+            className="h-7 w-auto brightness-0 invert opacity-90"
           />
-          <p className="text-[clamp(1.05rem,2.1vw,1.25rem)] font-light leading-relaxed text-[#404040] max-w-[58ch]">
+          <p className="text-[clamp(1.05rem,2.1vw,1.25rem)] font-light leading-relaxed text-[#b8bcc8] max-w-[58ch]">
             <Link href="https://crankstudio.io">Crank Studio</Link>{' '}
             is brought in when the stakes are high — when an experience needs to be
             intuitive for the public, credible for experts, and built to last beyond
