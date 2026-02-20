@@ -149,7 +149,7 @@ export default function AllisonPage() {
         {/* ── Bio ─────────────────────────────────────────────────────────── */}
         <div className="mt-14 space-y-5 text-[clamp(1rem,2vw,1.1rem)] font-light leading-relaxed text-[#555555]">
           <p className="stagger-paragraph" style={{ '--i': '0' } as React.CSSProperties}>
-            Allison is an Emmy-nominated, Venice Prize-winning interaction designer and researcher based in Paris, originally trained as an
+            Emmy-nominated and Venice Prize-winning, Allison Crank is an interaction designer and researcher based in Paris, originally trained as an
             architect at Wellesley College and MIT, then Contextual Design at Design Academy
             Eindhoven, and Design for Digital Innovation at EPFL and ECAL in Lausanne, Switzerland. In 2020 she launched{' '}
             <Link href="https://crankstudio.io" className="text-[#555555]">Crank Studio</Link>

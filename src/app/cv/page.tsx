@@ -4,7 +4,7 @@ import DesignerCursor from '../DesignerCursor';
 import PrintButton from '@/components/PrintButton';
 
 export const metadata: Metadata = {
-  title: 'CV',
+  title: 'Curriculum Vitae',
   description:
     'Curriculum vitae — Allison Crank. Interaction designer, researcher, and founder of Crank Studio. Experience across XR, AI, spatial computing, and immersive design.',
   robots: { index: false, follow: false },
