@@ -203,7 +203,10 @@ export default function AllisonPage() {
         </div>
 
         {/* ── Studio CTA ──────────────────────────────────────────────────── */}
-        <div className="scale-reveal mt-14 rounded-2xl bg-[#0B0F2E] border border-white/10 p-6 sm:p-8 space-y-4">
+        <div
+          className="scale-reveal mt-14 rounded-2xl p-6 sm:p-8 space-y-4"
+          style={{ background: 'linear-gradient(135deg, #2c1e4a 0%, #7a3f56 30%, #d5825e 58%, #a99ab8 80%, #96a1cd 100%)' }}
+        >
           <Image
             src={crankLogo}
             alt="Crank Studio"
@@ -212,8 +215,8 @@ export default function AllisonPage() {
             unoptimized
             className="h-7 w-auto brightness-0 invert opacity-90"
           />
-          <p className="text-[clamp(1.05rem,2.1vw,1.25rem)] font-light leading-relaxed text-[#b8bcc8] max-w-[58ch]">
-            <Link href="https://crankstudio.io">Crank Studio</Link>{' '}
+          <p className="text-[clamp(1.05rem,2.1vw,1.25rem)] font-light leading-relaxed text-white/80 max-w-[58ch]">
+            <a href="https://crankstudio.io" target="_blank" rel="noreferrer" className="text-white underline decoration-1 underline-offset-[3px] decoration-white/40 hover:decoration-white/80 transition-colors">Crank Studio</a>{' '}
             is brought in when the stakes are high — when an experience needs to be
             intuitive for the public, credible for experts, and built to last beyond
             a single moment.
