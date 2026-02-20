@@ -6,7 +6,7 @@ Born in the United States, she studied architecture at [Wellesley College](https
 
 Allison's work spans mixed reality, AI‑driven interfaces, spatial computing, and narrative systems. She has collaborated with **National Geographic**, **Google**, **Meta**, the **MIT Center for Advanced Virtuality**, and **Dreamscape**, creating experiences that explore how people perceive, move, and feel in digital–physical worlds.
 
-Her projects have been presented at the **Venice Film Festival**, **Cannes**, **Tribeca**, and **Annecy**. She was Lead Interaction Designer on **[IMPULSE](https://impulse-xr.io/)**, an Emmy-nominated XR experience about neurodiversity and perception, and her approach to immersive design has been profiled in **[XRMust](https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/)**.
+Her projects have been presented at the **Venice Film Festival**, **Cannes**, **Tribeca**, and **Annecy**. She was Lead Interaction Designer on **[IMPULSE](https://impulse-xr.io/)**, a 40-minute mixed-reality experience narrated by Academy Award-winner Tilda Swinton — winner of the Venice Immersive Achievement Prize and nominated for an Emmy — placing audiences inside the minds of four people living with ADHD. Her approach to immersive design has been profiled in **[XRMust](https://xrmust.com/xrmagazine/allison-crank-ux-xr-designer/)**.
 
 She has led the design of platforms and systems including  
 **LazyBrain** — a community platform built around serendipity and discovery  
