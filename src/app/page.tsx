@@ -160,7 +160,7 @@ export default function AllisonPage() {
             computing. I was lead interaction designer on{' '}
             <em><Link href="https://impulse-xr.io/" className="text-[#737373]">IMPULSE</Link></em>
             , a 40-minute mixed-reality experience narrated by Academy Award-winner Tilda Swinton
-            — winner of the Venice Immersive Achievement Award and nominated for an Emmy —
+            — winner of the Venice Immersive Achievement Prize and nominated for an Emmy —
             placing audiences inside the minds of four people living with ADHD. And on{' '}
             <em><Link href="https://www.electricskies.io/glimpse" className="text-[#737373]">Glimpse</Link></em>
             , an animated VR experience that won Best Interactive Experience at Cannes XR
