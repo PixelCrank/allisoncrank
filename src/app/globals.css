@@ -149,26 +149,29 @@ body {
   background-color: rgba(20, 20, 26, 0.82);
 }
 
-/* ── Link gradient hover ────────────────────────────────────────────── */
+/* ── Link gradient — always on, flows on hover ──────────────────────── */
 
-@keyframes gradient-text-in {
-  from { opacity: 0.15; }
-  to   { opacity: 1; }
-}
-
-.hover-link-gradient:hover .link-label,
-.hover-link-gradient:focus-visible .link-label {
+.hover-link-gradient .link-label {
   background-image: linear-gradient(
     90deg,
     #0B0F2E 0%,
-    #D9694A 50%,
-    #F0C17A 100%
+    #D9694A 40%,
+    #F0C17A 65%,
+    #0B0F2E 100%
   );
+  background-size: 220%;
+  background-position: 0%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  animation: gradient-text-in 0.22s ease forwards;
+  text-decoration-color: #D9694A;
+  transition: background-position 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-link-gradient:hover .link-label,
+.hover-link-gradient:focus-visible .link-label {
+  background-position: 100%;
 }
 
 .liquid-glass:hover .glass-pill-text,
@@ -181,28 +184,17 @@ body {
 }
 
 @media (forced-colors: active) {
-  .hover-link-gradient:hover .link-label,
-  .hover-link-gradient:focus-visible .link-label {
+  .hover-link-gradient .link-label {
     background-image: none;
     color: LinkText;
     -webkit-text-fill-color: LinkText;
   }
 }
 
-/* ── Mobile / touch: make links clearly visible ─────────────────────── */
+/* ── Mobile / touch ─────────────────────────────────────────────────── */
 @media (pointer: coarse) {
   .link-label {
-    text-decoration-color: currentColor; /* full-opacity underline */
-  }
-
-  /* Show the gradient text statically on touch devices (no hover) */
-  .hover-link-gradient .link-label {
-    background-image: linear-gradient(90deg, #0B0F2E 0%, #D9694A 50%, #F0C17A 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    text-decoration-color: #D9694A; /* visible underline under gradient text */
+    text-decoration-color: #D9694A;
   }
 }
 
