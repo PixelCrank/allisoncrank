@@ -4,9 +4,16 @@ import DesignerCursor from '../DesignerCursor';
 import PrintButton from '@/components/PrintButton';
 
 export const metadata: Metadata = {
-  title: 'CV — Allison Crank',
-  description: 'Curriculum vitae — Allison Crank. Available on request.',
+  title: 'CV',
+  description:
+    'Curriculum vitae — Allison Crank. Interaction designer, researcher, and founder of Crank Studio. Experience across XR, AI, spatial computing, and immersive design.',
   robots: { index: false, follow: false },
+  openGraph: {
+    title: 'CV — Allison Crank',
+    description:
+      'Curriculum vitae — Allison Crank. Interaction designer, researcher, and founder of Crank Studio.',
+    url: 'https://allisoncrank.com/cv',
+  },
 };
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -104,12 +111,17 @@ export default function CVPage() {
         {/* ── Profile ─────────────────────────────────────────────────────── */}
         <SectionLabel>Profile</SectionLabel>
         <p className="text-[0.95rem] font-light leading-relaxed text-[#404040] max-w-[66ch]">
-          Designer and researcher with fifteen years of experience leading the design and
-          production of immersive XR experiences, AI-driven platforms, and interactive
-          digital works. Founder and Creative Director of Crank Studio. Work spans cultural
-          institutions, healthcare, luxury, research, and emerging technology — delivered for
-          National Geographic, Google News Initiative, Meta, MIT, La Biennale di Venezia, Dreamscape,
-          and Audemars Piguet, among others.
+          Designer and researcher working across immersive technology, spatial computing, and
+          intelligent systems. Trained in architecture; now working at the edges of XR, AI, and
+          interaction design. Founder and Creative Director of Crank Studio, Paris.
+          <br /><br />
+          Her work has been shown at the Venice Film Festival, Cannes, Tribeca, and SIGGRAPH,
+          and recognised with a Venice Immersive Achievement Award and an Emmy nomination.
+          She has served as curator of Raumwelten — Germany's leading festival for scenography
+          and media — and mentors creators at the Venice VR College at La Biennale di Venezia.
+          <br /><br />
+          Clients include National Geographic, Meta, Google, MIT, Dreamscape, Audemars Piguet,
+          and Gallagher & Associates. Published in <em>Leonardo</em> (MIT Press).
         </p>
 
         {/* ── Experience ──────────────────────────────────────────────────── */}
@@ -162,14 +174,14 @@ export default function CVPage() {
 
         {[
           { year: '2025–', title: 'Culture Care', detail: 'UX and game design consultant. Clinical trials in preparation.', links: [{ label: 'culturecare.io', href: 'https://culturecare.io' }] },
-          { year: '2025', title: 'Audemars Piguet', detail: 'Research and data visualisation for the innovation team — video game industry landscape analysis and strategic interaction concepts.' },
+          { year: '2025', title: 'Audemars Piguet', detail: 'Research and strategic analysis for the innovation team. Delivered a video game industry exploration study and designed two interactive research databases: one mapping 100 timekeeping devices across history from antiquity to the present; one cataloguing 310 cultural works — film, games, music, art — exploring how culture has represented the concept of time.' },
           { year: '2024–25', title: 'My Magic Room', sub: 'DiverSsiTy · Swiss healthtech startup', detail: 'Full game designer and director. Mixed-reality therapeutic game for neurodiverse adolescents (ASD/ADHD, ages 13–20) on Meta Quest — fostering social, cognitive, emotional, and sensorimotor skills through adaptive gameplay. Clinical trials in progress.', links: [{ label: 'my-magic-room.io', href: 'https://www.my-magic-room.io/en/' }] },
-          { year: '2024–25', title: 'LazyBrain', detail: 'UX Designer and Product Lead. AI-driven community platform.', links: [{ label: 'lazybrain.ai', href: 'https://lazybrain.ai' }] },
+          { year: '2024–25', title: 'LazyBrain', detail: 'UX Designer and Product Lead. Community platform built around serendipity and discovery. In development.', links: [{ label: 'lazybrain.ai', href: 'https://lazybrain.ai' }] },
           { year: '2024', title: 'Apple Vision Pro × National Geographic "HOME" (Factory 42)', detail: 'Lead research and experience design for a spatial storytelling concept. Project cancelled pre-release.' },
           { year: '2023–25', title: 'Dreamscape Immersive — Multiplayer VR Classroom', detail: 'UX designer and systems advisor — multiplayer VR classroom experience design. Via Albyon 2023–24; direct engagement 2025.' },
-          { year: '2022–23', title: 'IMPULSE (Anagram × Meta)', detail: 'Lead interaction designer. MR experience on ADHD and neurodiversity. Venice Immersive Achievement Prize 2024; nominated for Emmy Award — Outstanding Emerging Media Program. Shown at Tribeca.', links: [{ label: 'impulse-xr.io', href: 'https://impulse-xr.io/' }] },
-          { year: '2022 –', title: 'Gallagher & Associates — Gilcrease Museum', detail: 'Head of UX. Led the design of interactive stations and mobile guides for a comprehensive museum experience.' },
-          { year: '2022', title: 'Raumwelten Festival Metaverse', detail: 'Lead curator, co-creator, and builder of the virtual platform hosting the festival — architecture, spatial design, and experience curation for one of the leading immersive design events in Europe.' },
+          { year: '2022–23', title: 'IMPULSE: Playing with Reality (Anagram × Meta)', detail: 'Lead interaction designer on a 40-minute mixed reality experience narrated by Academy Award-winner Tilda Swinton — placing audiences inside the minds of four people living with ADHD, transforming their physical surroundings in real time. Winner, Venice Immersive Achievement Award (81st Venice IFF, 2024); nominated for Emmy Award — Outstanding Emerging Media Program. Shown at Tribeca. Available on Meta Quest.', links: [{ label: 'impulse-xr.io', href: 'https://impulse-xr.io/' }, { label: 'Meta Quest', href: 'https://www.meta.com/en-gb/experiences/impulse-playing-with-reality/6468391126573976/' }] },
+          { year: '2022 –', title: 'Gallagher & Associates — Gilcrease Museum', detail: 'Head of UX for a landmark cultural project: the entirely new $83.6M Gilcrease Museum in Tulsa, Oklahoma — home to the world\'s largest collection of art of the American West. Designed interactive gallery stations and mobile visitor experiences for the new SmithGroup-designed building, opening 2027.' },
+          { year: '2022', title: 'Raumwelten – Platform for Scenography, Architecture & Media', detail: 'Curator of the 11th edition of Germany\'s leading festival for scenography, architecture, and media. Directed the programme around the theme /imagine, focusing on immersion and online social experience. Co-created and built the Raumwelten VR Hub — a digital multi-user environment accessible across mobile, desktop, and virtual reality — with a companion pop-up exhibition at the Ludwigsburg Museum. November 16–18, 2022.' },
           { year: '2021', title: 'Glimpse (Electric Skies)', detail: 'Interaction Design Lead and Line Production. Animated interactive VR experience starring Taron Egerton and Lucy Boynton, directed by Benjamin Cleary. Premiered Venice Biennale 2021. Won Best Interactive Experience at Cannes XR and VR Cristal at Annecy.', links: [{ label: 'electricskies.io/glimpse', href: 'https://www.electricskies.io/glimpse' }] },
           { year: '2020–23', title: 'Pixt — Google News Initiative', detail: 'Head of UX Design and Research. AI-driven trust and verification platform for digital media, funded by the Google News Initiative.', links: [{ label: 'trust.pixt.co', href: 'https://trust.pixt.co/' }] },
         ].map((p) => (

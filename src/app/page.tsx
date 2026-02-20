@@ -14,7 +14,30 @@ import PixelTooltip from '@/components/PixelTooltip';
 export const metadata: Metadata = {
   title: 'Allison Crank',
   description:
-    'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working at the intersection of architecture, immersive technology, and intelligent systems.',
+    'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+  alternates: {
+    canonical: 'https://allisoncrank.com',
+  },
+  openGraph: {
+    title: 'Allison Crank',
+    description:
+      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+    url: 'https://allisoncrank.com',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Allison Crank — interaction designer and researcher',
+      },
+    ],
+  },
+  twitter: {
+    title: 'Allison Crank',
+    description:
+      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio.',
+    images: ['/images/og.png'],
+  },
 };
 
 function Link({ href, children, className = '' }: { href: string; children: React.ReactNode; className?: string }) {
@@ -135,10 +158,11 @@ export default function AllisonPage() {
           <p className="stagger-paragraph" style={{ '--i': '1' } as React.CSSProperties}>
             My work spans XR, VR, MR, game design, AI-driven interfaces, and spatial
             computing. I was lead interaction designer on{' '}
-            <Link href="https://impulse-xr.io/" className="text-[#737373]">IMPULSE</Link>
-            , an Emmy-nominated mixed-reality experience about ADHD, perception, and
-            neurodiversity, and on{' '}
-            <Link href="https://www.electricskies.io/glimpse" className="text-[#737373]">Glimpse</Link>
+            <em><Link href="https://impulse-xr.io/" className="text-[#737373]">IMPULSE</Link></em>
+            , a 40-minute mixed-reality experience narrated by Academy Award-winner Tilda Swinton
+            — winner of the Venice Immersive Achievement Award and nominated for an Emmy —
+            placing audiences inside the minds of four people living with ADHD. And on{' '}
+            <em><Link href="https://www.electricskies.io/glimpse" className="text-[#737373]">Glimpse</Link></em>
             , an animated VR experience that won Best Interactive Experience at Cannes XR
             and the VR Cristal at Annecy after premiering at Venice. I&apos;ve also designed
             therapeutic games for neurodiverse adolescents currently entering clinical
@@ -168,9 +192,13 @@ export default function AllisonPage() {
             <Link href="https://www.hslu.ch/en/lucerne-school-of-design-film-and-art/degree-programmes/bachelor/spatial-design/" className="text-[#737373]">HSLU in Lucerne</Link>
             , and as an expert lecturer on the{' '}
             <Link href="https://xpro.mit.edu/courses/course-v1:xPRO+ARVRx+R1/" className="text-[#737373]">MIT xPRO Virtual Reality &amp; Augmented Reality programme</Link>
-            . I also mentor at the Venice Biennale College Cinema — most recently for the 2026 edition.
+            In 2022 I served as curator of{' '}
+            <Link href="https://www.raum-welten.com/" className="text-[#737373]">Raumwelten</Link>
+            {' '}— Germany&apos;s leading festival for scenography, architecture, and media — directing
+            its 11th edition around the theme <em>/imagine</em>. I also mentor at the Venice
+            Biennale College Cinema — most recently for the 2026 edition.
           </p>
-          <p className="stagger-paragraph" style={{ '--i': '5' } as React.CSSProperties}>
+          <p className="stagger-paragraph italic" style={{ '--i': '5' } as React.CSSProperties}>
             I design for how people feel, move, and make meaning in complex, hybrid worlds. Offline, I&apos;m usually roaming Paris with <PixelTooltip src={pixeldog} />, my Pomeranian — an exacting authority on nap architecture.
           </p>
         </div>

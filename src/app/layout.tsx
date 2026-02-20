@@ -52,9 +52,37 @@ const crankLineFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Allison Crank",
+  metadataBase: new URL('https://allisoncrank.com'),
+  title: {
+    default: 'Allison Crank',
+    template: '%s — Allison Crank',
+  },
   description:
-    "Designer and researcher based in Paris. Founder of Crank Studio. Working at the intersection of architecture, immersive technology, and intelligent systems.",
+    'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+  keywords: [
+    'Allison Crank',
+    'interaction designer',
+    'UX designer',
+    'XR designer',
+    'immersive experience design',
+    'spatial computing',
+    'mixed reality',
+    'virtual reality',
+    'AI design',
+    'Crank Studio',
+    'Paris designer',
+    'Emmy nominated',
+    'Venice Immersive',
+    'scenography',
+    'game design',
+  ],
+  authors: [{ name: 'Allison Crank', url: 'https://allisoncrank.com' }],
+  creator: 'Allison Crank',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -67,18 +95,29 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
   },
   openGraph: {
-    title: "Allison Crank",
+    title: 'Allison Crank',
     description:
-      "Designer and researcher based in Paris. Founder of Crank Studio.",
-    url: "https://allisoncrank.com",
-    siteName: "Allison Crank",
-    type: "website",
+      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio. Working across XR, spatial computing, AI-driven interfaces, and immersive experience design.',
+    url: 'https://allisoncrank.com',
+    siteName: 'Allison Crank',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Allison Crank — interaction designer and researcher',
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Allison Crank",
+    card: 'summary_large_image',
+    title: 'Allison Crank',
     description:
-      "Designer and researcher based in Paris. Founder of Crank Studio.",
+      'Emmy-nominated interaction designer and researcher based in Paris. Founder of Crank Studio.',
+    creator: '@allisoncrank',
+    images: ['/images/og.png'],
   },
 };
 
